@@ -11,6 +11,8 @@ body {
     background-color: #E0E0E0;
 }
 
+
+
 /* NAVBAR */
 .nav, .no1, .no3, .sambutan {
     display: flex;
@@ -138,8 +140,6 @@ body {
     padding-left: 45px;
 }
 
-
-
 /* DASHBOARD */
 
 .dashboard{
@@ -158,38 +158,42 @@ body {
     letter-spacing: -0.07em;
 }
 
-/* .grid-container{
+.grid-container {
+
     display: grid;
     margin-top: 40px;
     margin-left: 20px;
-    gap: 1rem;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 15px; /* Menambahkan gap untuk jarak antar elemen grid */
 }
 
-.upcoming-container{
-    grid-area: 1 / 1 / 2 / 2;
+/* Grid Item Styles */
+.upcoming-container {
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
 }
 
-.schedule-container{
-    grid-area: 1 / 2 / 3 / 3;
+.schedule-container {
+    grid-column: 3 / 4;
+    grid-row: 1 / span 2;
 }
 
-.toDoList-container{
-    grid-area: 2 / 1 / 3 / 2;
-} */
-
+.toDoList-container {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
+}
 
 /* UPCOMING CLASS */
 
-.upcoming{
+.upcoming-container > p{
     font-family: "Inter", sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: #444343;
     padding-bottom: 17px;
 }
+
 .card-upcoming{
     width: 560px;
     height: 382px;
@@ -300,6 +304,14 @@ body {
     border: 12px solid rgba(207, 207, 207, 0.2);
 }
 
+.schedule-container > p{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    color: #444343;
+    padding-bottom: 17px;
+}
+
 
 /* TO DO LIST */
 .card-toDoList{
@@ -311,10 +323,11 @@ body {
     border-radius: 24px;
 }
 
-.toDoList-container > span{
+.toDoList-container > p{
     font-family: 'Inter';
     font-weight: 600;
     font-size: 20px;
     color: #444343;
-
+    padding-bottom: 10px;
+    padding-bottom: 17px;
 }
